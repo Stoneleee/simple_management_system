@@ -52,15 +52,9 @@ function formProvider (fields) {
                 });
             };
 
-            reset = () => {
-                this.setState({
-                    form: initialFormState,
-                });
-            };
-
             render () {
                 const { form, formValid } = this.state;
-                return <Comp { ...this.proprs } form={form} formValid={formValid} onFormChange={this.handleValueChange} onReset={this.reset} />
+                return <Comp { ...this.proprs } form={form} formValid={formValid} onFormChange={this.handleValueChange} />
             }
         }
 

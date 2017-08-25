@@ -70,7 +70,7 @@ class UserList extends Component {
                                             <a
                                                 href="javascript:void(0)"
                                                 onClick={() => this.handleEdit(user)}
-                                            >编辑</a>
+                                            >编辑</a>&nbsp;
                                             <a
                                                 href="javascript:void(0)"
                                                 onClick={() => this.handleDel(user)}
