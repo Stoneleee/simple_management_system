@@ -13,7 +13,7 @@ class UserList extends Component {
         }
     }
 
-    componentWillMount () {
+    componentDidMount () {
         fetch('http://localhost:3000/user')
             .then(res => res.json())
             .then(res => {
@@ -21,6 +21,10 @@ class UserList extends Component {
                     userList: res,
                 });
             });
+    }
+
+    handleEdit (user) {
+        this.context.router.push('user/edit/' + user.id);
     }
 
     handleDel = (user) => {
@@ -86,4 +90,7 @@ class UserList extends Component {
         );
     }
 }
+UserList.contextTypes = {
+    router: React.PropTypes.object.isRequired
+};
 export default UserList;
